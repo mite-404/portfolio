@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import VJB from "../assets/projects/vjb.png";
+import xplore from "../assets/projects/xplore.png";
+import oldstation from "../assets/projects/oldstation.png";
+import roles from "../assets/projects/roles.png";
+import crudify from "../assets/projects/crudify.png";
+const projects = [
+  {
+    title: "Virtual JukeBox",
+    description:
+      'Virtual Jukebox is an interactive app that lets users create a shared music "party" on Spotify, where friends can collaboratively add, vote, and enjoy tracks in real-time, making every gathering a personalized soundtrack.',
+    image: VJB,
+  },
+  {
+    title: "Xplore",
+    description:
+      "Travel Explorer is an app designed for people who love to travel and discover new places. Users can browse interesting locations through a fun, scrollable feed, explore points of interest on an interactive map, and keep track of places they have visited or liked in their personal profile. ",
+    image: xplore,
+  },
+  {
+    title: "OldStation Menu",
+    description:
+      "OldStation Menu offers a convenient way to explore all the delicious food and drink options from your favorite pub. Easily browse categories, check out detailed descriptions, and make your selections—all from your phone or computer. Perfect for ordering ahead or deciding what to try next during your visit!",
+    image: oldstation,
+  },
+  {
+    title: "Crudify",
+    description:
+      "CRUDify is a lightweight and flexible library designed to simplify creating, reading, updating, and deleting operations in your applications. It provides easy-to-use tools and abstractions that speed up development, letting you focus on building features instead of repetitive boilerplate code.",
+    image: crudify,
+  },
+  {
+    title: "Admin role panel",
+    description:
+      "Admin Role Permissions Panel is a powerful tool that allows administrators to manage user roles and control access levels within the system. Easily assign, update, or revoke permissions to ensure the right users have the appropriate access to features and data, enhancing security and organization.",
+    image: roles,
+  },
+];
+---
+
+<InfoLayout>
+  <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+    <H1> Projects </H1>
+
+    <ul
+      class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8"
+    >
+      {
+        projects.map((project) => (
+          <li>
+            <Image
+              src={project.image}
+              alt={project.title}
+              class="aspect-[1/1.33] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4"
+            />
+            <div class="p-1 sm:p-2">
+              <h2 class="text-base text-zinc-100">{project.title}</h2>
+              <p class="text-sm text-zinc-400 text-balance">
+                {project.description}
+              </p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</InfoLayout>

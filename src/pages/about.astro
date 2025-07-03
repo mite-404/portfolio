@@ -1,0 +1,103 @@
+---
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+  <div
+    class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32"
+  >
+    <div class="space-y-4 sm:space-y-12">
+      <h1>Get to know me</h1>
+
+      <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+        I'm Mite Gjorgjiev — a
+        <span class="underline underline-offset-4 decoration-zinc-400"
+          >Full Stack Web Developer</span
+        >
+        based near Milan, Italy. I work with modern stacks like <strong
+          >Next.js</strong
+        >, and <strong>Supabase</strong>, but I can easily adapt to the tech
+        stack of any client. I focus on building scalable architectures, smooth
+        animations, and clean design systems. I avoid no-code and AI tools by
+        choice — I prefer full control over what I build. I also love reading,
+        traveling, and training — sport is a big part of my daily balance. I
+        like things clean, fast, and honest.
+      </p>
+    </div>
+
+    <!-- Work Experience Timeline -->
+    <div class="space-y-6">
+      <h2
+        class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500"
+      >
+        Work Experience
+      </h2>
+      <ul class="px-4 text-zinc-400 space-y-4">
+        <li>
+          <strong>2024 - Present</strong>: While working there, I've also taken
+          on various side projects for external clients, building tailored
+          digital solutions outside of my full-time role.
+        </li>
+        <li>
+          <strong>2019 - Present</strong>: Working at MCE S.r.l., developing
+          custom software that controls industrial machines and systems.
+        </li>
+        <li>
+          <strong>2014 - 2019</strong>: Studied Computer Science at ISII
+          Marconi, where I built a strong foundation in software development.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Technical Skillset -->
+    <div class="space-y-6">
+      <h2
+        class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500"
+      >
+        My Technical Stack
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 text-zinc-400">
+        <div>
+          <h3 class="font-semibold text-zinc-300">Frontend</h3>
+          <ul class="list-disc list-inside">
+            <li>Angular 19+ (Reactive, Signals)</li>
+            <li>Next.js</li>
+            <li>Framer-motion</li>
+            <li>Typescript / Javascript</li>
+            <li>Tailwind</li>
+            <li>HTML</li>
+            <li>SCSS</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-zinc-300">Backend</h3>
+          <ul class="list-disc list-inside">
+            <li>NestJS</li>
+            <li>MongoDB</li>
+            <li>Supabase</li>
+            <li>Keycloak</li>
+            <li>Authentication, REST APIs, WebSocket</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-zinc-300">Dev Tools</h3>
+          <ul class="list-disc list-inside">
+            <li>VsCode / WebStorm</li>
+            <li>GitHub, Git</li>
+            <li>Docker (light usage)</li>
+            <li>Vercel</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-zinc-300">Other</h3>
+          <ul class="list-disc list-inside">
+            <li>Ubuntu</li>
+            <li>Fast MVP for customer</li>
+            <li>Personal branding & portfolio creation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</InfoLayout>
